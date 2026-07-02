@@ -7,7 +7,7 @@ PORT = int(os.getenv("PORT", 8000))
 
 @app.route("/")
 def home():
-    return "Hello Python App"
+    return "Hello Python App App"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=PORT)
