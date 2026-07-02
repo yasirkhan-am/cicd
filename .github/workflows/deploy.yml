@@ -5,15 +5,16 @@ on:
     branches:
       - main
 
-
 jobs:
-  deploy
+  deploy:
     runs-on: self-hosted
 
-
     steps:
-      - name: Test
-      - run: pwd
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Show Current Directory
+        run: pwd
 
       - name: List Files
         run: ls -la
