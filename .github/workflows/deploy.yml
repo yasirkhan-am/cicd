@@ -1,0 +1,19 @@
+name: Local CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  deploy
+    runs-on: self-hosted
+
+
+    steps:
+      - name: Test
+      - run: pwd
+
+      - name: List Files
+        run: ls -la
