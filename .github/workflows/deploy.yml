@@ -18,3 +18,9 @@ jobs:
 
       - name: List Files
         run: ls -la
+
+      - name: Pull Latest Code
+        run: git pull origin main
+
+      - name: Build and Restart Docker Containers
+        run: docker compose up -d --build
