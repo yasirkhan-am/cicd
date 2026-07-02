@@ -10,17 +10,9 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Show Current Directory
-        run: pwd
-
-      - name: List Files
-        run: ls -la
-
-      - name: Pull Latest Code
-        run: git pull origin main
-
-      - name: Build and Restart Docker Containers
-        run: docker compose up -d --build
+      - name: Deploy Application
+        run: |
+          cd /home/myasir/hello-python-docker
+          git pull origin main
+          docker compose down
+          docker compose up -d --build
